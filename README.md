@@ -1,6 +1,6 @@
 # KSOL - Plataforma de predicción de la producción eléctrica de una instalación fotovoltaica
 [taxi image](/img/manhattan_taxis_image.jpg)
-# IMAGEN PORTADA
+IMAGEN PORTADA
 
 This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedin.com/in/alejandroruizber/).  
 *Kschool - Master in Data Science*
@@ -33,8 +33,8 @@ efecto invernadero.
 
 **Por favor, consulte la memoria del proyecto, adjunta en el repositorio, para mayor detalle**
 
-#2_Preparación
-##2_1_Requerimientos
+# 2_Preparación
+## 2_1_Requerimientos
 
 Este proyecto ha sido desarrollado en sistema operativo Linux (Ubuntu), concretamente en el kernel **xubuntu 20.04**. 
 To execute this project it will be necesary to have installed the last version of Anaconda. 
@@ -54,7 +54,7 @@ Más allá del paquete base de *Conda*, se han ejecutado las siguientes instalac
 ``pip install streamlit_folium``
 
 
-##2_2_Estructura-e-instrucciones
+## 2_2_Estructura-e-instrucciones
 
 Para poder replicar el proyecto en otra máquina, se debe clonar este repositorio de GitHub.
 La estructura de carpetas es la siguiente:
@@ -76,8 +76,8 @@ Si se desea ejecutar algún notebook, basta con cambiar este directorio en estas
 sustituyéndolo por aquel donde se encuentre todo descargado (folder TFM).
 
 
-#3_Proyecto
-##3_1_Desarrollo-del-proyecto
+# 3_Proyecto
+## 3_1_Desarrollo-del-proyecto
 
 IMAGEN ESQUEMA FUNCIONAMIENTO
 
@@ -107,7 +107,7 @@ Notebooks: [Script_funcional](https://github.com/ruizber23/TFM/blob/main/noteboo
 y [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb).  
 
 
-##3_2_Funcionamiento
+## 3_2_Funcionamiento
 
 Cuando el usuario solicite la predicción de su producción eléctrica para el día siguiente, se descargarán:
 *	Datos de radiación solar de dos días antes: Se obtendrán 
@@ -129,7 +129,7 @@ consumo, se generará también una estimación de la compensación de excedentes
 IMAGEN FUNCIONAMIENTO REGULAR
 
 
-#4_Guia-de-interfaz
+# 4_Guia-de-interfaz
 
 En primer lugar, se debrá ejecutar (una única vez) el notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Una vez hecho esto, 
 para poder ejecutar de forma local la app de Streamlit, se deben seguir los siguientes pasos:
