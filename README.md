@@ -12,7 +12,7 @@ This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedi
 * [3_Proyecto](#3_Proyecto)
    * [3_1_Desarrollo del proyecto](3_1_Desarrollo-del-proyecto)
    * [3_2_Funcionamiento](3_2_Funcionamiento)
-* [4 Guia de interfaz](#4_Guia-de-interfaz)
+* [4_Guia de interfaz](#4_Guia-de-interfaz)
 
 
 # 1_Introduction
@@ -129,7 +129,7 @@ consumo, se generará también una estimación de la compensación de excedentes
 IMAGEN FUNCIONAMIENTO REGULAR
 
 
-# 4 Guia-de-interfaz
+# 4_Guia-de-interfaz
 
 En primer lugar, se debrá ejecutar (una única vez) el notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Una vez hecho esto, 
 para poder ejecutar de forma local la app de Streamlit, se deben seguir los siguientes pasos:
