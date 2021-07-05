@@ -1,5 +1,5 @@
 # KSOL - Plataforma de predicción de la producción eléctrica de una instalación fotovoltaica
-#![taxi image](/img/manhattan_taxis_image.jpg)
+[taxi image](/img/manhattan_taxis_image.jpg)
 # IMAGEN PORTADA
 
 This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedin.com/in/alejandroruizber/).  
@@ -59,7 +59,7 @@ Más allá del paquete base de *Conda*, se han ejecutado las siguientes instalac
 Para poder replicar el proyecto en otra máquina, se debe clonar este repositorio de GitHub.
 La estructura de carpetas es la siguiente:
 
-# IMAGEN ESTRUCTURA
+ IMAGEN ESTRUCTURA
 
 *	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contiene los notebooks de jupyter (.ipynb) necesarios para ejecutar el proyecto. 
 *	[data](https://github.com/ruizber23/TFM/tree/main/data): contiene los datos necesarios para el entrenamiento del modelo. Estos deberán descargarse 
@@ -79,7 +79,7 @@ sustituyéndolo por aquel donde se encuentre todo descargado (folder TFM).
 #3_Proyecto
 ##3_1_Desarrollo-del-proyecto
 
-# IMAGEN ESQUEMA FUNCIONAMIENTO
+IMAGEN ESQUEMA FUNCIONAMIENTO
 
 El proceso que se ha seguido para el desarrollo de este TFM es el siguiente:
 
@@ -126,7 +126,7 @@ de la instalación (orientación, inclinación y potencia pico) y la ubicación 
 cada hora del día siguiente mediante un modelo de instalación fotovoltaica. Además, si el usuario introduce datos sobre su perfil de 
 consumo, se generará también una estimación de la compensación de excedentes que podrá recibir.
  
-# IMAGEN FUNCIONAMIENTO REGULAR
+IMAGEN FUNCIONAMIENTO REGULAR
 
 
 #4_Guia-de-interfaz
