@@ -12,7 +12,7 @@ This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedi
 * [3_Proyecto](#3_Proyecto)
    * [3_1_Desarrollo del proyecto](3_1_Desarrollo-del-proyecto)
    * [3_2_Funcionamiento](3_2_Funcionamiento)
-* [4_Guia de interfaz](#4_Guia-de-interfaz)
+* [4 Guia de interfaz](#4_Guia-de-interfaz)
 
 
 # 1_Introduction
