@@ -129,7 +129,7 @@ consumo, se generará también una estimación de la compensación de excedentes
 IMAGEN FUNCIONAMIENTO REGULAR
 
 
-# 4_Guia-de-interfaz
+# 4 Guia-de-interfaz
 
 En primer lugar, se debrá ejecutar (una única vez) el notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Una vez hecho esto, 
 para poder ejecutar de forma local la app de Streamlit, se deben seguir los siguientes pasos:
@@ -142,7 +142,7 @@ Las últimas celdas de ambos scripts deben mantenerse en ejecución al mismo tie
 Si aparece algún error, bastará con actualizar la página hasta que desaparezca.
 
 Se adjunta a continuación un vídeo ejemplo del uso de la app:
-[Turorial app](https://youtu.be/fr-S27TEnqg)
+[Tutorial app](https://youtu.be/fr-S27TEnqg)
 
 
 
