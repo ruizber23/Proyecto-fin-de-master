@@ -96,7 +96,7 @@ These data are processed to later generate the predictions of ambient temperatur
 
 # 4_Interface-guide
 
-![Tarot](/images/prediction.png) 
+![Tarot](/images/prediction_readme.png) 
 
 
 First, the notebook must be run (only once) [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Once this is done, in order to run the Streamlit app locally, the following steps must be followed:
