@@ -48,8 +48,8 @@ Beyond the base package of *Conda*, the following installations have been execut
 In order to replicate the project on another machine, this GitHub repository must be cloned.
 The folder structure is as follows:
 
-![Estructura1](/images/Esquema carpetas 1.jpg)
-![Estructura2](/images/Esquema carpetas.jpg)
+![Estructura1](/images/Esquema-carpetas-1.jpg)
+![Estructura2](/images/Esquema-carpetas.jpg)
 
 
 *	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contains the jupyter notebooks (.ipynb) needed to run the project. 
@@ -67,7 +67,7 @@ If you want to run a notebook, just change this directory in these cells, replac
 # 3_Project
 ## 3_1_Project-development
 
-![EsquemaTFM](/images/Esquema TFM.jpg)
+![EsquemaTFM](/images/Esquema-TFM.jpg)
 
 The process that has been followed for the development of this TFM is as follows:
 
