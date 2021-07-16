@@ -1,7 +1,5 @@
 # KSOL - Prediction platform for the electricity production of a photovoltaic installation
-[taxi image](/img/manhattan_taxis_image.jpg)
 ![Portada](/images/fondo.jpg)
-IMAGEN PORTADA
 
 This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedin.com/in/alejandroruizber/).  
 *Kschool - Master in Data Science*
@@ -50,7 +48,9 @@ Beyond the base package of *Conda*, the following installations have been execut
 In order to replicate the project on another machine, this GitHub repository must be cloned.
 The folder structure is as follows:
 
- IMAGEN ESTRUCTURA
+![Estructura1](/images/Esquema carpetas 1.jpg)
+![Estructura2](/images/Esquema carpetas.jpg)
+
 
 *	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contains the jupyter notebooks (.ipynb) needed to run the project. 
 *	[data](https://github.com/ruizber23/TFM/tree/main/data): contains the data necessary for training the model. These will need to be downloaded from the attached shared folder and extracted in *data*.
@@ -67,7 +67,7 @@ If you want to run a notebook, just change this directory in these cells, replac
 # 3_Project
 ## 3_1_Project-development
 
-IMAGEN ESQUEMA FUNCIONAMIENTO
+![EsquemaTFM](/images/Esquema TFM.jpg)
 
 The process that has been followed for the development of this TFM is as follows:
 
@@ -91,12 +91,12 @@ When the user requests the prediction of their electricity production for the ne
 
 These data are processed to later generate the predictions of ambient temperature and solar radiation per hour for a specific location, using previously trained *machine learning* models. Then, taking into account the characteristics of the installation (orientation, inclination and peak power) and its location, the electricity production for each hour of the following day will be returned by means of a photovoltaic installation model. In addition, if the user enters data about their consumption profile, an estimate of the surplus compensation that they may receive will also be generated.
  
-IMAGEN FUNCIONAMIENTO REGULAR
+![Esquema-funcionamiento](/images/Estructura_funcionamiento.jpg)
 
 
 # 4_Interface-guide
 
-IMAGEN TAROT 
+![Tarot](/images/prediction.png) 
 
 
 First, the notebook must be run (only once) [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Once this is done, in order to run the Streamlit app locally, the following steps must be followed:
