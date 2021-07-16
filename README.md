@@ -49,13 +49,15 @@ In order to replicate the project on another machine, this GitHub repository mus
 The folder structure is as follows:
 
 ![Estructura1](/images/Esquema-carpetas-1.jpg)
-![Estructura2](/images/Esquema-carpetas.jpg)
 
 
 *	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contains the jupyter notebooks (.ipynb) needed to run the project. 
 *	[data](https://github.com/ruizber23/TFM/tree/main/data): contains the data necessary for training the model. These will need to be downloaded from the attached shared folder and extracted in *data*.
 * [images](https://github.com/ruizber23/TFM/tree/main/images): contains the images used in the Streamlit interface and in the README file.
 *	[envirnonment.yml](https://github.com/ruizber23/TFM/blob/main/environment.yml): File generated to be able to quickly reproduce the project environment, with all its packages and versions.
+
+The structure of [data](https://github.com/ruizber23/TFM/tree/main/data) is:
+![Estructura2](/images/Esquema-carpetas.jpg)
 
 All of this must be in a folder called TFM. In the case of the machine where the project was developed, the directory was: /home/dsc/git/TFM/.
 At the beginning of the different notebooks the following commands are executed:
