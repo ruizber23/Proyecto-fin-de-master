@@ -91,7 +91,7 @@ When the user requests the prediction of their electricity production for the ne
 
 These data are processed to later generate the predictions of ambient temperature and solar radiation per hour for a specific location, using previously trained *machine learning* models. Then, taking into account the characteristics of the installation (orientation, inclination and peak power) and its location, the electricity production for each hour of the following day will be returned by means of a photovoltaic installation model. In addition, if the user enters data about their consumption profile, an estimate of the surplus compensation that they may receive will also be generated.
  
-![Esquema-funcionamiento](/images/Estructura_funcionamiento.jpg)
+![Esquema_funcionamiento](/images/Estructura-funcionamiento.jpg)
 
 
 # 4_Interface-guide
