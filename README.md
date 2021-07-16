@@ -1,4 +1,4 @@
-# KSOL - Plataforma de predicción de la producción eléctrica de una instalación fotovoltaica
+# KSOL - Prediction platform for the electricity production of a photovoltaic installation
 [taxi image](/img/manhattan_taxis_image.jpg)
 IMAGEN PORTADA
 
@@ -6,44 +6,34 @@ This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedi
 *Kschool - Master in Data Science*
 
 * [1_Introduction](#1_Introduction)
-* [2_Preparación](#2_Preparación)
-   * [2_1_Requerimientos](#2_1_Requerimientos)
-   * [2_2_Estructura e instrucciones](#2_2_Estructura-e-instrucciones)
-* [3_Proyecto](#3_Proyecto)
-   * [3_1_Desarrollo del proyecto](3_1_Desarrollo-del-proyecto)
-   * [3_2_Funcionamiento](3_2_Funcionamiento)
-* [4_Guia de interfaz](#4_Guia-de-interfaz)
+* [2_Preparation](#2_Preparation)
+   * [2_1_Requirements](#2_1_Requirements)
+   * [2_2_Structure and instructions](#2_2_Structure-and-instructions)
+* [3_Project](#3_Project)
+   * [3_1_Project development](3_1_Project-development)
+   * [3_2_Operation](3_2_Operation)
+* [4_Interface guide](#4_Interface-guide)
 
 
 # 1_Introduction
 
-Este trabajo tendrá como objeto el desarrollar un modelo que permita a los propietarios domésticos de 
-instalaciones fotovoltaicas conocer con antelación una estimación fiable de la producción de energía
-eléctrica de la que podrán disponer a cada hora del día siguiente, con el objetivo de que puedan aprovechar
-esta generación de electricidad al máximo. Este tipo de sistemas de predicción suelen ser de pago y 
-desarrollados *ad hoc* para las características de una estación concreta, o dependientes de la conexión 
-al inversor de cada planta. 
+This work will aim to develop a model that allows domestic owners of photovoltaic installations to know in advance a reliable estimation of the electricity production that they will be able to have at each hour of the next day, with the aim that they can take advantage of this generation of electricity to the maximum. These types of prediction systems are usually expensive and developed *ad hoc* for the characteristics of a specific installation, or dependent on the connection to the investor of each plant.
 
-Así, se pretende aportar en este trabajo una herramienta gratuita enfocada en la predicción de la 
-producción eléctrica de un sistema de placas fotovoltaicas para cualquier localización en España. Se trata
-de alentar de este modo al consumidor doméstico a hacer un uso más eficiente de los recursos de generación
-disponibles, de modo que ahorre en su factura eléctrica , y se reduzca el coste de la producción eléctrica
-en el mercado para el resto de usuarios de la red, reduciendo al mismo tiempo la emisión de gases de
-efecto invernadero.
+Thus, it is intended to provide in this work a free tool focused on the prediction of the electrical production of a photovoltaic panel system for any location in Spain. It is about encouraging the domestic consumer to make more efficient use of the available generation resources, in order to save on his electricity bill, and reduce the cost of electricity production in the market for the rest of the network users, while reducing the emission of greenhouse effect gases.
 
-**Por favor, consulte la memoria del proyecto, adjunta en el repositorio, para mayor detalle**
+**Please read the project report, attached to the repository, for more details**
 
-# 2_Preparación
-## 2_1_Requerimientos
+# 2_Preparation
+## 2_1_Requirements
 
-Este proyecto ha sido desarrollado en sistema operativo Linux (Ubuntu), concretamente en el kernel **xubuntu 20.04**. 
+This project has been developed in the Linux operating system (Ubuntu), specifically in the kernel **xubuntu 20.04**. 
 To execute this project it will be necesary to have installed the last version of Anaconda. 
 Most libraries used by this project are included by this distribution.
-Para poder tener las mismas librerías y versiones necesarias para la ejecución del proyecto, 
-puede actualizar su environment (“env_name”) con el archivo **envirnonment.yml** adjunto:
+In order to have the same libraries and versions necessary for the execution of the project,
+you can update your environment ("env_name") with the attached file **envirnonment.yml**:
 ``conda env update --name <env_name> --file environment.yml``
 
-Más allá del paquete base de *Conda*, se han ejecutado las siguientes instalaciones:
+Beyond the base package of *Conda*, the following installations have been executed:
 ``pip install ipynb``
 ``pip install python-crontab``
 ``conda install croniter -y``
@@ -54,95 +44,69 @@ Más allá del paquete base de *Conda*, se han ejecutado las siguientes instalac
 ``pip install streamlit_folium``
 
 
-## 2_2_Estructura-e-instrucciones
+## 2_2_Structure-and-instructions
 
-Para poder replicar el proyecto en otra máquina, se debe clonar este repositorio de GitHub.
-La estructura de carpetas es la siguiente:
+In order to replicate the project on another machine, this GitHub repository must be cloned.
+The folder structure is as follows:
 
  IMAGEN ESTRUCTURA
 
-*	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contiene los notebooks de jupyter (.ipynb) necesarios para ejecutar el proyecto. 
-*	[data](https://github.com/ruizber23/TFM/tree/main/data): contiene los datos necesarios para el entrenamiento del modelo. Estos deberán descargarse 
-de la carpeta compartida adjunta y extraerse en esta.
-* [images](https://github.com/ruizber23/TFM/tree/main/images): contiene las imágenes utilizadas en la interfaz de Streamlit y en el archivo README.
-*	[envirnonment.yml](https://github.com/ruizber23/TFM/blob/main/environment.yml): Archivo generado para poder reproducir rápidamente el entorno del proyecto, 
-con todos sus paquetes y versiones.
+*	[notebooks](https://github.com/ruizber23/TFM/tree/main/notebooks): contains the jupyter notebooks (.ipynb) needed to run the project. 
+*	[data](https://github.com/ruizber23/TFM/tree/main/data): contains the data necessary for training the model. These will need to be downloaded from the attached shared folder and extracted in *data*.
+* [images](https://github.com/ruizber23/TFM/tree/main/images): contains the images used in the Streamlit interface and in the README file.
+*	[envirnonment.yml](https://github.com/ruizber23/TFM/blob/main/environment.yml): File generated to be able to quickly reproduce the project environment, with all its packages and versions.
 
-Todo ello debe encontrarse en una carpeta llamada TFM. En el caso de la máquina donde se ha desarrollado el proyecto, el directorio era: /home/dsc/git/TFM/.
-Al comienzo de los diferentes notebooks se ejecutan los siguientes comandos:
+All of this must be in a folder called TFM. In the case of the machine where the project was developed, the directory was: /home/dsc/git/TFM/.
+At the beginning of the different notebooks the following commands are executed:
 ``%cd /home/dsc/git/TFM/``
 ``directorio = '/home/dsc/git/TFM/'``
-Si se desea ejecutar algún notebook, basta con cambiar este directorio en estas celdas, 
-sustituyéndolo por aquel donde se encuentre todo descargado (folder TFM).
+If you want to run a notebook, just change this directory in these cells, replacing it with the one where everything is downloaded (TFM folder).
 
 
-# 3_Proyecto
-## 3_1_Desarrollo-del-proyecto
+# 3_Project
+## 3_1_Project-development
 
 IMAGEN ESQUEMA FUNCIONAMIENTO
 
-El proceso que se ha seguido para el desarrollo de este TFM es el siguiente:
+The process that has been followed for the development of this TFM is as follows:
 
-*	En primer lugar, se han obtenido los datos necesarios para la elaboración de los modelos.
--	En el notebook [Estaciones](https://github.com/ruizber23/TFM/blob/main/notebooks/Estaciones.ipynb) se descargan las listas de estaciones 
-meteorológicas y de radiación de [AEMET](https://opendata.aemet.es/centrodedescargas/productosAEMET). 
-Para la obtención de los datos y los entrenamientos de los modelos se han utilizado las estaciones 
-meteorológicas como localizaciones ejemplo dentro del territorio nacional.
--	En [Obtencion datos periodica](https://github.com/ruizber23/TFM/blob/main/notebooks/Obtencion_datos_periodica.ipynb) se obtienen los datos diarios para 
-los modelos de predicción. Se ejecuta diariamente mediante el notebook [Lanzador_cron](https://github.com/ruizber23/TFM/blob/main/notebooks/Lanzador_cron.ipynb), 
-en su forma *.py*, para generar, mediante la acumulación de estos archivos diarios, una base de datos históricos para el entrenamiento de los modelos. 
-*	Después, los datos de los modelos se han limpiado y preparado para el entrenamiento. Notebooks: [Data_cleaning](https://github.com/ruizber23/TFM/blob/main/notebooks/Data_cleaning.ipynb)
-y [Data_preparation](https://github.com/ruizber23/TFM/blob/main/notebooks/Data_preparation.ipynb).
-*	Una vez obtenidos estos datos, se generan, prueban y entrenan dos modelos, que predecirán de forma 
-horaria la radiación solar y la temperatura ambiente en la localización deseada, en [Modelo_rad](https://github.com/ruizber23/TFM/blob/main/notebooks/Modelo_rad.ipynb) 
-y [Modelo_temp](https://github.com/ruizber23/TFM/blob/main/notebooks/Modelo_temp.ipynb).
-*	Finalmente existe una serie de notebooks que permiten desplegar en modo local la interfaz de usuario 
-mediante una app de Streamlit, donde cualquier propietario de una instalación fotovoltaica podrá 
-introducir sus datos y obtener su predicción de producción eléctrica para el día siguiente. 
-Notebooks: [Script_funcional](https://github.com/ruizber23/TFM/blob/main/notebooks/Script_funcional.ipynb), 
-[Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb), 
-[Funciones_solares](https://github.com/ruizber23/TFM/blob/main/notebooks/Funciones_solares.ipynb),
-[Interfaz](https://github.com/ruizber23/TFM/blob/main/notebooks/Interfaz.ipynb), 
-[Streamlit_app_1](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_1.ipynb) 
-y [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb).  
+*	In the first place, the necessary data for the elaboration of the models have been obtained.
+- On the notebook [Estaciones](https://github.com/ruizber23/TFM/blob/main/notebooks/Estaciones.ipynb) lists of meteorological and radiation stations are downloaded from [AEMET](https://opendata.aemet.es/centrodedescargas/productosAEMET). To obtain the data and for the training of the models, the meteorological stations locations have been used as example locations within the national territory.
+-	In [Obtencion datos periodica](https://github.com/ruizber23/TFM/blob/main/notebooks/Obtencion_datos_periodica.ipynb) daily data are obtained for the prediction models. It is run daily via notebook [Lanzador_cron](https://github.com/ruizber23/TFM/blob/main/notebooks/Lanzador_cron.ipynb), in its *.py* form, to generate, through the accumulation of these daily files, a historical database for the training of the models. 
+*	Afterwards, the data from the models has been cleaned up and prepared for training. Notebooks: [Data_cleaning](https://github.com/ruizber23/TFM/blob/main/notebooks/Data_cleaning.ipynb)
+and [Data_preparation](https://github.com/ruizber23/TFM/blob/main/notebooks/Data_preparation.ipynb).
+*	Once these data are obtained, two models are generated, tested and trained, which will predict the
+hourly solar radiation and ambient temperature at the desired location, in [Modelo_rad](https://github.com/ruizber23/TFM/blob/main/notebooks/Modelo_rad.ipynb) and [Modelo_temp](https://github.com/ruizber23/TFM/blob/main/notebooks/Modelo_temp.ipynb).
+*	Finally, there is a series of notebooks that allow the user interface to be displayed locally through a Streamlit app, where any owner of a photovoltaic installation can enter its data and get a prediction of electricity production for the next day. Notebooks: [Script_funcional](https://github.com/ruizber23/TFM/blob/main/notebooks/Script_funcional.ipynb), [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb), [Funciones_solares](https://github.com/ruizber23/TFM/blob/main/notebooks/Funciones_solares.ipynb), [Interfaz](https://github.com/ruizber23/TFM/blob/main/notebooks/Interfaz.ipynb), [Streamlit_app_1](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_1.ipynb) and [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb).  
 
 
-## 3_2_Funcionamiento
+## 3_2_Operation
 
-Cuando el usuario solicite la predicción de su producción eléctrica para el día siguiente, se descargarán:
-*	Datos de radiación solar de dos días antes: Se obtendrán 
-de [CAMS Radiation Service](http://www.soda-pro.com/web-services/radiation/cams-radiation-service), 
-un sistema de información fotovoltaica de la Comisión Europea.
-*	Datos meteorológicos horarios de los últimos 5 días: Obtenidos de [OpenWeather](https://openweathermap.org/api/one-call-api#history).
-*	Datos de predicción meteorológica de las siguientes 48 horas: Obtenidos 
-de [OpenWeather](https://openweathermap.org/api/one-call-api).
-*	Datos de radiación horaria del día anterior para las diferentes estaciones de radiación 
-de [AEMET](https://opendata.aemet.es/centrodedescargas/productosAEMET):
-Obtenidos de Aemet Open Data.
+When the user requests the prediction of their electricity production for the next day, the following data will be downloaded:
+*	Solar radiation data from two days before: Will be obtained from [CAMS Radiation Service](http://www.soda-pro.com/web-services/radiation/cams-radiation-service), a photovoltaic information system of the European Commission.
+*	Hourly weather data for the last 5 days: Obtained from [OpenWeather](https://openweathermap.org/api/one-call-api#history).
+*	Weather forecast data for the next 48 hours: Obtained from [OpenWeather](https://openweathermap.org/api/one-call-api).
+*	Hourly radiation data of the previous day for the different radiation stations of [AEMET](https://opendata.aemet.es/centrodedescargas/productosAEMET): Obtained from Aemet Open Data.
 
-Estos datos se procesan para después generar las predicciones de temperatura ambiente y radiación solar por hora para una ubicación 
-concreta, utilizando los modelos de *machine learning* entrenados previamente. Después, teniendo en cuenta las características 
-de la instalación (orientación, inclinación y potencia pico) y la ubicación de esta, se devolverá la producción eléctrica para 
-cada hora del día siguiente mediante un modelo de instalación fotovoltaica. Además, si el usuario introduce datos sobre su perfil de 
-consumo, se generará también una estimación de la compensación de excedentes que podrá recibir.
+These data are processed to later generate the predictions of ambient temperature and solar radiation per hour for a specific location, using previously trained *machine learning* models. Then, taking into account the characteristics of the installation (orientation, inclination and peak power) and its location, the electricity production for each hour of the following day will be returned by means of a photovoltaic installation model. In addition, if the user enters data about their consumption profile, an estimate of the surplus compensation that they may receive will also be generated.
  
 IMAGEN FUNCIONAMIENTO REGULAR
 
 
-# 4_Guia-de-interfaz
+# 4_Interface-guide
 
-En primer lugar, se debrá ejecutar (una única vez) el notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Una vez hecho esto, 
-para poder ejecutar de forma local la app de Streamlit, se deben seguir los siguientes pasos:
-*	1-Se debe ejecutar el notebook [Interfaz](https://github.com/ruizber23/TFM/blob/main/notebooks/Interfaz.ipynb), para que exista el archivo .py que define la interfaz.
-*	2-Se ejecuta [Streamlit_app_1](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_1.ipynb). 
-*	3-Pasados **un par de minutos** con este notebook en ejecución (cuando la última celda muestre: *Compiled successfully!*), se ejecuta [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb). 
-Las últimas celdas de ambos scripts deben mantenerse en ejecución al mismo tiempo. 
-*	Se abrirá una pestaña en el navegador con la app de Streamlit.
+IMAGEN TAROT 
 
-Si aparece algún error, bastará con actualizar la página hasta que desaparezca.
 
-Se adjunta a continuación un vídeo ejemplo del uso de la app:
-[Tutorial app](https://youtu.be/fr-S27TEnqg)
+First, the notebook must be run (only once) [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Once this is done, in order to run the Streamlit app locally, the following steps must be followed:
+*	1-The notebook [Interfaz](https://github.com/ruizber23/TFM/blob/main/notebooks/Interfaz.ipynb) should be running, so that the .py file that defines the interface exists.
+*	2-[Streamlit_app_1](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_1.ipynb) is executed. 
+*	3-After **a couple of minutes** with this notebook running (after the last cell shows: *Compiled successfully!*), [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb) is executed. The last cells of both scripts must be kept running at the same time. 
+*	A tab will open in the browser with the Streamlit app.
+
+If an error appears, it will be enough to refresh the page until it disappears, or repeat the process, waiting for more time between the execution of both notebooks.
+
+An example video of the use of the app is attached below: [Tutorial app](https://youtu.be/fr-S27TEnqg)
 
 
 
