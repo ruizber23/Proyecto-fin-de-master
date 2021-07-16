@@ -99,7 +99,7 @@ These data are processed to later generate the predictions of ambient temperatur
 ![Tarot](/images/prediction_readme.png) 
 
 
-First, the notebook must be run (only once) [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb). Once this is done, in order to run the Streamlit app locally, the following steps must be followed:
+First, the notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob/main/notebooks/Requisitos_streamlit.ipynb) must be run (only once). Once this is done, in order to run the Streamlit app locally, the following steps must be followed:
 *	1-The notebook [Interfaz](https://github.com/ruizber23/TFM/blob/main/notebooks/Interfaz.ipynb) should be running, so that the .py file that defines the interface exists.
 *	2-[Streamlit_app_1](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_1.ipynb) is executed. 
 *	3-After **a couple of minutes** with this notebook running (after the last cell shows: *Compiled successfully!*), [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb) is executed. The last cells of both scripts must be kept running at the same time. 
