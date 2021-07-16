@@ -1,5 +1,6 @@
 # KSOL - Prediction platform for the electricity production of a photovoltaic installation
 [taxi image](/img/manhattan_taxis_image.jpg)
+[Portada](/images/fondo.jpg)
 IMAGEN PORTADA
 
 This project has been developed by [Alejandro Ruiz Berciano](https://www.linkedin.com/in/alejandroruizber/).  
