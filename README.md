@@ -107,7 +107,7 @@ First, the notebook [Requisitos_streamlit](https://github.com/ruizber23/TFM/blob
 *	3-After **a couple of minutes** with this notebook running (after the last cell shows: *Compiled successfully!*), [Streamlit_app_2](https://github.com/ruizber23/TFM/blob/main/notebooks/Streamlit_app_2.ipynb) is executed. The last cells of both scripts must be kept running at the same time. 
 *	A tab will open in the browser with the Streamlit app.
 
-If an error appears, it will be enough to refresh the page until it disappears, or repeat the process, waiting for more time between the execution of both notebooks.
+If an error appears, it will be enough to refresh the page until it disappears, or repeat the process, waiting for more time between the execution of both notebooks. If this doesn't work, try refreshing the page.
 
 An example video of the use of the app is attached below: [Tutorial app](https://youtu.be/fr-S27TEnqg)
 
